@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nancyproject</title>
+    <style>
+      .Container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+        background-color: #78acc2;
+      }
+      body {
+        background: #f0fffe;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        font-size: 36px;
+        margin-top: 20px;
+        font-weight: 600;
+      }
+      h2 {
+        color: #34495e;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 10px;
+        border: 2px solid #2980b9;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        max-width: 90%;
+      }
+      .Taking-a-break {
+        text-align: justify;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      a {
+        color: #9729b9;
+        text-decoration: none;
+        font-weight: bold;
+        font-weight: 100;
+        transition: color 360ms ease-in-out;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #b92933;
+      }
+      .pay-now {
+        display: block;
+        margin: 20px auto;
+        padding: 15px 30px;
+        background-color: #4f29b9;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: background-color 360ms ease-in-out;
+      }
+      .pay-now:hover {
+        background-color: #db3434;
+        text-decoration: underline;
+      }
+      .book-now {
+        display: block;
+        margin: 20px auto;
+        padding: 15px 30px;
+        background-color: #b929a3;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: background-color 360ms ease-in-out;
+      }
+      .book-now:hover {
+        background-color: #98db34;
+        text-decoration: underline;
+      }
+      .highlight {
+        color: #e73cc2;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Container">
+      <h1>
+        <em>Stay with us🏡 </em>
+      </h1>
+      <h2>
+        Welcome to Nancy's
+        <span class="highlight">Unforgettable</span> StayCation Home
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/090/original/chastity-cortijo-M8iGdeTSOkg-unsplash.jpg?1753406745"
+        alt="Stay with us"
+        width="200"
+      />
+      <hr />
+      <p class="Taking-a-break">
+        What does it look like to just take a break after a busy schedule and go
+        somewhere in a hideout? Whether alone or with friends or with family,
+        get to experience the magic Kenya at the shores of the coast.
+        <br />
+        <strong>Why take a break? </strong>
+        <br />
+        Taking a vacation is important for both mental and physical well-being,
+        offering a crucial break from work-related stress and promoting overall
+        health. It allows for stress reduction, improved mood, better sleep, and
+        even a reduced risk of heart disease. Vacations also offer opportunities
+        for enhanced creativity, improved focus, and strengthened relationships.
+        In essence, taking a vacation is not just a luxury but a necessity for
+        maintaining a balanced and healthy life.
+      </p>
+      <br />
+      <div>
+        <strong>What does it look like to visit Kenya?</strong>
+        <ul>
+          <li>Enjoy nice weather</li>
+          <li>Enjoy the beautiful scenery</li>
+          <li>Enjoy the beautiful beaches</li>
+          <li>Enjoy the beautiful culture</li>
+        </ul>
+      </div>
+      <a href="https://tourkenya.go.ke/" target="_blank">
+        Visit Kenya's tourism website to explore
+      </a>
+      <p class="staycation">
+        And that is not with an exception of staying with us😊;
+      </p>
+      <div>
+        <strong>What we offer</strong>
+        <ul>
+          <li>Cosy and comfortable rooms</li>
+          <li>Free Wi-Fi</li>
+          <li>Kitchen and dining area</li>
+          <li>Swimming pool</li>
+          <li>Free parking</li>
+          <li>24/7 security</li>
+          <li>Friendly staff</li>
+          <li>Beautiful garden</li>
+        </ul>
+      </div>
+      <button class="book-now">Book Now</button>
+      <button class="pay-now">Pay Now</button>
+      <script>
+        let name, email, phone, preference, payment;
+        function bookNow() {
+          name = prompt("What is you name?");
+          let age = parseInt(prompt("What is your age?"));
+
+          if (isNaN(age)) {
+            alert(" please enter a valid number for your age.");
+            return;
+          }
+          if (age < 18) {
+            alert(
+              `Sorry ${name}, you must be atleast 18 years old to book for a room.`
+            );
+            return;
+          }
+
+          alert(`Hello ${name}, you are elegible to book.`);
+
+          email = prompt("What is your email?");
+          phone = prompt("What is your phone number?");
+          preference = prompt(
+            "What is your room preference? (Single/Double/Suite)"
+          );
+          preference = preference.trim().toLowerCase();
+          if (
+            preference === "single" ||
+            preference === "double" ||
+            preference === "suite"
+          ) {
+            alert(
+              "Your booking details are valid. Please click 'Pay Now' to continue."
+            );
+          } else {
+            alert(
+              "Please enter a valid room preference (Single, Double, or Suite)."
+            );
+          }
+        }
+        function payNow() {
+          if (!name || !email || !phone) {
+            alert(
+              "Please complete the booking form first by clicking 'Book Now'."
+            );
+            return;
+          }
+          payment = prompt(
+            "What is your payment method? (Credit/Debit Card or Cash)"
+          ).toLowerCase();
+          if (payment === "cash") {
+            alert(
+              "Your  booking is confirmed. You will pay at the reception upon arrival."
+            );
+          } else if (payment === "credit card" || payment === "debit card") {
+            alert(
+              `Thank you ${name}! Your booking is confirmed. We will contact you at ${email} or ${phone} about your booking.`
+            );
+          } else {
+            alert(
+              "Please enter a valid payment method (Credit/Debit Card or Cash)."
+            );
+          }
+        }
+        let bookButton = document.querySelector(".book-now");
+        let payButton = document.querySelector(".pay-now");
+
+        bookButton.addEventListener("click", bookNow);
+        payButton.addEventListener("click", payNow);
+      </script>
+      This page was built by <em>Nancy Kiplimo</em>
+    </div>
+  </body>
+</html>
