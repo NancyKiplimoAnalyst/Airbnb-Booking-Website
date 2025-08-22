@@ -29,4 +29,4 @@ https://nancykiplimoanalyst.github.io/Airbnb-Booking-Website/
 ## 🚀 Run Locally
 Just open `index.html` in your browser. No setup needed.
 
-## 📦 Project Structure
+© 2025 Nancy Kiplimo
